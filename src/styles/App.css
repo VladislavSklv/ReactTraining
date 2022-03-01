@@ -6,7 +6,9 @@
 
 #root {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
 }
 
 .App {
@@ -19,22 +21,27 @@
     align-items: center;
     padding: 15px;
     border: 2px solid teal;
+    border-radius: 10px;
     margin-top: 15px;
 }
 
+.post__btns {
+    display: flex;
+}
+
 .post-enter {
-    transform: translateX(-450px);
+    transform: translateX(-250%);
 }
 .post-enter-active {
     transform: translateX(0px);
-    transition: all 700ms ease-in;
+    transition: all 400ms ease-in;
 }
 .post-exit {
     opacity: 1;
 }
 .post-exit-active {
-    transform: translateX(-450px);
-    transition: all 700ms ease-in;
+    transform: translateX(-250%);
+    transition: all 400ms ease-in;
 }
 .page__wrapper {
     margin-top: 30px;
@@ -44,13 +51,39 @@
 .page {
     padding: 5px;
     border: 1px solid teal;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
     color: #000;
+    margin-right: 2px;
 }
 
 .page__current {
     background-color: teal;
     font-weight: bold;
     color: white;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: lightgrey;
+}
+
+.navbar__links {
+    margin-left: auto;
+}
+.navbar__link {
+    text-decoration: none;
+    color: teal;
+    margin-right: 10px;
+}
+
+.error404 {
+    font-size: 60px;
 }
